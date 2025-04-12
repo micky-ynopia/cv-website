@@ -1,0 +1,302 @@
+<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Micky D. Ynopia - CV</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #0a0a0a;
+      color: #fff;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Background SVG Tech Lines */
+    .background-svg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      opacity: 0.05;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 1000px;
+      margin: 80px auto;
+      padding: 30px;
+      background: rgba(0, 0, 0, 0.8);
+      border-radius: 20px;
+      box-shadow: 0 12px 30px rgba(0, 255, 255, 0.2);
+      text-align: center;
+    }
+
+    .profile-photo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #00ffff;
+      margin-bottom: 20px;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(0, 255, 255, 0.3); }
+      70% { box-shadow: 0 0 0 15px rgba(0, 255, 255, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(0, 255, 255, 0); }
+    }
+
+    h1, h3 {
+      font-family: 'Orbitron', sans-serif;
+      color: #00ffff;
+      margin: 10px 0;
+    }
+
+    h3 {
+      font-weight: normal;
+      font-size: 1.2em;
+      color: #66ccff;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 14px;
+      margin: 15px 0;
+      background-color: #001f33;
+      color: #00ffff;
+      border: 1px solid #00ffff;
+      border-radius: 10px;
+      cursor: pointer;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1em;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin: 15px 0;
+  background-color: #0f172a;
+  color: #00f7ff;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, #00f7ff, #007BFF, #00f7ff);
+  transition: all 0.5s ease-in-out;
+  z-index: -1;
+}
+
+.btn:hover::before {
+  left: 0;
+}
+
+.btn:hover {
+  color: #fff;
+  border-color: #00f7ff;
+  box-shadow: 0 0 15px #00f7ff, 0 0 40px #007BFF;
+}
+
+
+    .info {
+      display: none;
+      margin-top: 20px;
+      text-align: left;
+    }
+
+    .timeline {
+      position: relative;
+      margin-top: 20px;
+      padding-left: 30px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 15px;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: #00ffff;
+      animation: growLine 1s ease-in-out forwards;
+    }
+
+    @keyframes growLine {
+      from { height: 0; }
+      to { height: 100%; }
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 30px;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -2px;
+      top: 5px;
+      width: 12px;
+      height: 12px;
+      background: #00ffff;
+      border-radius: 50%;
+      border: 2px solid #001f33;
+      box-shadow: 0 0 0 3px #00ffff44;
+    }
+
+    .timeline-content {
+      background: rgba(0, 255, 255, 0.05);
+      padding: 15px 20px;
+      border-radius: 10px;
+      border-left: 5px solid #00ffff;
+      animation: fadeInUp 0.6s ease forwards;
+      opacity: 0;
+      transform: translateY(20px);
+      color: #ccf6ff;
+    }
+
+    .timeline-item:nth-child(even) .timeline-content {
+      background: rgba(0, 255, 255, 0.08);
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SVG Tech Line Background -->
+  <svg class="background-svg" viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid slice">
+    <path d="M0 0 L1000 1000" stroke="#00ffff" stroke-width="2"/>
+    <path d="M1000 0 L0 1000" stroke="#00ffff" stroke-width="2"/>
+    <path d="M500 0 L500 1000" stroke="#00ffff" stroke-width="1"/>
+    <path d="M0 500 L1000 500" stroke="#00ffff" stroke-width="1"/>
+    <path d="M250 0 L750 1000" stroke="#00ffff" stroke-width="0.5"/>
+    <path d="M750 0 L250 1000" stroke="#00ffff" stroke-width="0.5"/>
+  </svg>
+
+  <div class="container">
+    <!-- Profile Section -->
+    <img src="micky.jpg" alt="Micky Ynopia" class="profile-photo">
+    <h1>Micky D. Ynopia</h1>
+    <h3>Bachelor of Science in Computer Engineering</h3>
+
+     <!-- Buttons and Timeline Sections -->
+     <button class="btn" onclick="toggleInfo('profile')">Profile</button>
+     <div class="info" id="profile">
+       <div class="timeline">
+        <div class="timeline-item"><div class="timeline-content"><strong>About Me:</strong> Motivated Computer Engineering student passionate about IoT, web development, automation, and digital innovation. Skilled in problem-solving and leadership through community service and academic experiences.</div></div>
+        <div class="timeline-item"><div class="timeline-content"><strong>Address:</strong> Bagsac, Madrid, Surigao del Sur</div></div>
+        <div class="timeline-item"><div class="timeline-content"><strong>Email:</strong> mickyynopia9@gmail.com</div></div>
+        <div class="timeline-item"><div class="timeline-content"><strong>Phone Number:</strong> 09382242377</div></div>
+      </div>
+    </div>
+
+    <!-- Buttons and Timeline Sections -->
+    <button class="btn" onclick="toggleInfo('personal')">Personal Information</button>
+    <div class="info" id="personal">
+      <div class="timeline">
+        <div class="timeline-item"><div class="timeline-content"><strong>Age:</strong> 20 years old</div></div>
+        <div class="timeline-item"><div class="timeline-content"><strong>Sex::</strong> Female</div></div>
+        <div class="timeline-item"><div class="timeline-content"><strong>Date of Birth:</strong> May 24, 2004</div></div>
+        <div class="timeline-item"><div class="timeline-content"><strong>Nationality:</strong> Filipino</div></div>
+        <div class="timeline-item"><div class="timeline-content"><strong>Status:</strong> Single</div></div>
+        <div class="timeline-item"><div class="timeline-content"><strong>Religion:</strong> Roman Catholic</div></div>
+        <div class="timeline-item"><div class="timeline-content"><strong>Height:</strong> 5'0"</div></div>
+        <div class="timeline-item"><div class="timeline-content"><strong>Weight:</strong> 44 kg</div></div>
+      </div>
+    </div>
+
+    <button class="btn" onclick="toggleInfo('education')">Educational Background</button>
+    <div class="info" id="education">
+      <div class="timeline">
+        <div class="timeline-item"><div class="timeline-content"><strong>Primary: <br>
+          Catmon, Malabon City <br>
+        </strong> Catmon Integrated School <br>
+          S.Y. 2015 – 2016</div></div>
+        <div class="timeline-item"><div class="timeline-content"><p><strong>Junior High School:</strong><br>
+          Madrid National High School<br>
+          Linibunan, Madrid, Surigao del Sur <br>
+          S.Y. 2016 – 2020</p></div></div>
+        <div class="timeline-item"><div class="timeline-content"><p><strong>Senior High School:</strong><br>
+          Madrid National High School<br>
+          Science, Technology, Engineering, and Mathematics Strand<br>
+          Linibunan, Madrid, Surigao del Sur <br>
+          S.Y. 2020 – 2022</p></div></div>
+        <div class="timeline-item"><div class="timeline-content"><p><strong>Tertiary:</strong><br>
+          North Eastern Mindanao State University<br>
+          Bachelor of Science in Computer Engineering<br>
+          Pag-Antayan, Cantilan, Surigao del Sur<br>
+          S.Y. 2022 – Present</p></div></div>
+      </div>
+    </div>
+
+    <button class="btn" onclick="toggleInfo('work')">Work Experience</button>
+    <div class="info" id="work">
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <strong>SPES – Engineering Department Office (2023–2024)</strong>
+            <ul>
+              <li>Assisted in project planning and documentation</li>
+              <li>Provided technical and clerical support</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <strong>SK Secretary – Brgy. Bagsac (2023–Present)</strong>
+            <ul>
+              <li>Documented meetings and youth projects</li>
+              <li>Led coordination of SK programs</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleInfo(id) {
+      const section = document.getElementById(id);
+      section.style.display = section.style.display === "block" ? "none" : "block";
+    }
+  </script>
+
+</body>
+</html>
